@@ -2,8 +2,8 @@
 
 
 
-[![Instagram](/public/images/android-icon-72x72.png)](https://www.instagram.com/ratfriendlyoficial)
-[![YouTube](/public/images/android-icon-72x72.png)](https://www.youtube.com/@ratfriendlyoficial)
+[![Instagram]](https://www.instagram.com/ratfriendlyoficial)
+[![YouTube]](https://www.youtube.com/@ratfriendlyoficial)
 
 > 🐀🐀🐀🐀🐀🐀🐀🐀🐀🐀🐀🐀🐀🐀🐀🐀🐀
 

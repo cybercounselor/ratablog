@@ -1,0 +1,73 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Navbar from "../../components/Navbar.astro";
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Cardd from '../../components/Cardd.astro';
+
+interface MarkdownFrontmatter {
+  date: number;
+  heroImage: string;
+}
+const allPosts = await Astro.glob<MarkdownFrontmatter> ('../../content/blog/*.md');
+const sortedPosts = allPosts.sort((a) => new Date(a.frontmatter.date).valueOf());
+
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			ul {
+				list-style-type: none;
+				padding: unset;
+			}
+			ul li {
+				display: flex;
+				padding-left: 2em;
+			}
+			ul li :global(time) {
+				flex: 0 0 130px;
+				font-style: italic;
+				color: #595959;
+			}
+			ul li a:visited {
+				color: #ee5ba0;
+			}
+		</style>
+	</head>
+	<body>
+		<Navbar />
+		<main>
+			<section>
+				<article class="max-w-6xl mx-auto px-3">
+					<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8"       data-test="articles-section">
+					 {sortedPosts.map(p => 
+						<div class="col-span-1">
+							<Cardd post={p} />
+							</div>)}
+					 </section>
+				</article>
+				<!-- Listado de posts -->
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<FormattedDate date={post.data.pubDate} />
+								<a href={`/blog/${post.slug}/`} >{post.data.title}</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
