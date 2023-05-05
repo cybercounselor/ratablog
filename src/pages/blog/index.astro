@@ -3,17 +3,9 @@ import BaseHead from '../../components/BaseHead.astro';
 import Navbar from "../../components/Navbar.astro";
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
+import { getCollection, getEntryBySlug } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Cardd from '../../components/Cardd.astro';
-
-interface MarkdownFrontmatter {
-  date: number;
-  heroImage: string;
-}
-const allPosts = await Astro.glob<MarkdownFrontmatter> ('../../content/blog/*.md');
-const sortedPosts = allPosts.sort((a) => new Date(a.frontmatter.date).valueOf());
-
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -48,14 +40,11 @@ const posts = (await getCollection('blog')).sort(
 		<main>
 			<section>
 				<article class="max-w-6xl mx-auto px-3">
-					<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8"       data-test="articles-section">
-					 {sortedPosts.map(p => 
-						<div class="col-span-1">
-							<Cardd post={p} />
-							</div>)}
+					<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8" data-test="articles-section">
+						<Cardd />	
 					 </section>
 				</article>
-				<!-- Listado de posts -->
+
 				<ul>
 					{
 						posts.map((post) => (

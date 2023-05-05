@@ -29,8 +29,11 @@ const items = [
 ---
 
 
-<div class=" bg-zinc-900 text-white ">
-  <div class=" header p-3 m-2 font-semibold ">LOGO</div>
+<div class="bg-zinc-900 text-white m-3 rounded-b-xl pl-3 pt-3 ">
+  <div class="header flex items-center">
+    <img class="w-20 hidden sm:block" src="/images/roerto_logo_ratfriendly.png" alt="Logo Rat Friendly">
+  </div>
+  
   
       <nav>
         <input type="checkbox" id="check"/>
@@ -41,7 +44,7 @@ const items = [
             <span class="line"></span>
           </div>
           <style> 
-          /* nav styles */
+          
           .hamburger {
             padding-right: 20px;
             cursor: pointer;
@@ -52,7 +55,7 @@ const items = [
             width: 40px;
             height: 5px;
             margin-bottom: 10px;
-            background-color: rgb(0, 54, 96);
+            background-color: rgb(251 113 133 / var(--tw-bg-opacity));
           }
           @media screen and (min-width: 636px) {
             .nav-links {

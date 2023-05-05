@@ -7,8 +7,7 @@
       "google_maps": "https://goo.gl/maps/qTEeZZ4CZDaFbHoR9",
       "fotos": [
         "../../images/location-pin.png",
-        "https://via.placeholder.com/300x200",
-        "https://via.placeholder.com/300x200"
+        "../../images/embers.jpg"
       ],
       "sitio_web": "http://www.theembersrestaurant.com.ar/"
     },
@@ -20,8 +19,7 @@
       "google_maps": "https://goo.gl/maps/SWrALCXXB3MDdQKA8",
       "fotos": [
         "../../images/location-pin.png",
-        "../../images/liquiliqui.jpg",
-        "https://via.placeholder.com/300x200"
+        "../../images/liquiliqui.jpg"
       ],
       "sitio_web": "https://www.instagram.com/liquiliqui_ba/"
     },
@@ -33,8 +31,7 @@
       "google_maps": "https://goo.gl/maps/w35V5TCkxQvhumc67",
       "fotos": [
         "../../images/location-pin.png",
-        "../../images/ratcafe2.jpg",
-        "https://via.placeholder.com/300x200"
+        "../../images/ratcafe2.jpg"
       ],
       "sitio_web": "https://ejemplo.com/cafe-del-centro"
     }

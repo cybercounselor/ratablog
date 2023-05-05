@@ -22,9 +22,9 @@
  <!--este div es todo el coso las 2 columnas -->
       
 
-      <div> <!--Este div es la columna de los cafes -->
-      <ul class="space-y-8 mt-10 p-4">
-        {
+  <div> <!--Este div es la columna de los cafes -->
+    <ul class="space-y-8 mt-10 p-4">
+      {
         Places.map((place) => {
           return (
           <li {...{ key: place.nombre }}  class="flex space-x-5">
@@ -40,16 +40,15 @@
                   <div class="flex space-x-4 mb-4">
                       <img src={place.fotos[1]} alt={"Foto de " + place.nombre} class="h-48 w-48 object-cover rounded">
                       </div> 
-                      <img src={place.fotos[2]} alt={"Foto de " + place.nombre} class="h-48 w-48 object-cover rounded">
                       <div>
                       <a href={place.sitio_web} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">Sitio Web</a>
                       </div>
                       </div>
                       </li>
-);
-})
-}
-</ul>
+          );
+          })
+      }
+  </ul>
 </div>
   <div class="grid grid-rows-3 grid-cols-1 "> <!-- este div es la columna derecha-->
           <div><img class="h-screen w-full object-cover" src="../images/heladeria.jpg" alt="rata comiendo helado"></div>

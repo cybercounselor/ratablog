@@ -2,16 +2,16 @@
 import '../styles/global.css';
 
 export interface Props {
-	title: string;
-	description: string;
+	title?: string;
+	description?: string;
 	image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
+const { title, description, image = '/images/roerto_logo.png' } = Astro.props;
 ---
-<meta charset="utf-8" />
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -46,7 +46,7 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 <meta name="theme-color" content="#ffffff">
 
 <!-- Open Graph / Facebook -->
-<meta property="og:locale" content="es_ES" />
+<meta property="og:locale" content="es" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />

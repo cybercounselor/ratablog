@@ -2,7 +2,7 @@
 title: "Donde conseguir ratas"
 description: "Compra, adopción y rescate."
 pubDate: "Jul 15 2022"
-heroImage: "images/donde_hay_ratas.jpg"
+heroImage: "/images/donde_hay_ratas.jpg"
 ---
 ## Falta una rata en tu vida!
 

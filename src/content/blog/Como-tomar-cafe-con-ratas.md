@@ -2,7 +2,7 @@
 title: "Cómo tomar café con una rata"
 description: "Cómo es salir de paseo con ratas"
 pubDate: "Jul 15 2022"
-heroImage: "images/lechedecoco.jpg"
+heroImage: "/images/lechedecoco.jpg"
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Nombres para ratas
 description: "Nombres exclusivos para ratas"
-pubDate: "Jul 15 2022"
-heroImage: "images/nametag.jpg"
+pubDate: "Jul-15-2022"
+heroImage: "/images/nametag.jpg"
 ---
 
 
